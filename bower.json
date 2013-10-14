@@ -1,0 +1,25 @@
+{
+  "name": "chrome-markdown",
+  "version": "0.1.0",
+  "authors": [
+    "Justin Russell <jus.russell@gmail.com>"
+  ],
+  "main": "index.html",
+  "keywords": [
+    "chrome",
+    "app",
+    "markdown"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-ace": "~0.0.4",
+    "bootstrap": "~3.0.0"
+  }
+}
