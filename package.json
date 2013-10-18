@@ -1,0 +1,43 @@
+{
+  "name": "chrome-markdown",
+  "version": "0.1.0",
+  "description": "",
+  "main": "karma.conf.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "karma": "~0.10.2",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-coffee-preprocessor": "~0.1.0",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-jasmine": "~0.1.3",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma-requirejs": "~0.1.0",
+    "karma-script-launcher": "~0.1.0",
+    "karma-mocha": "~0.1.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-jasmine": "~0.1.3"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jtrussell/chrome-markdown.git"
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "markdown"
+  ],
+  "author": "jtrussell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jtrussell/chrome-markdown/issues"
+  }
+}

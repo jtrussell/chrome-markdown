@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Chrome Markdown</title>
-  <link rel="stylesheet" href="assets/stylesheets/main.css" type="text/css" />
+  
+  <!-- build:css assets/app.css -->
+  <script src="vendor/less/dist/less-1.4.2.js" type="text/javascript" charset="utf-8"></script>
+  <!-- endbuild -->
+  
 </head>
 <body ng-app="cm">
 
   <div class="row">
-
-    <div class="col-md-3">
-      hello
-    </div>
-
-    <div class="col-md-9">
-      world
-    </div>
-  
+    <editor class="col-md-3" ng-bind-html-unsafe="'# Hello World' | markdown"></editor>
+    <previewclass="col-md-9"></preview>
   </div>
   
-  <script src="assets/scripts/main.js" type="text/javascript" charset="utf-8"></script>
+  <!-- build:js assets/app.js -->
+  <script src="vendor/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+  <script src="vendor/marked/lib/marked.js" type="text/javascript" charset="utf-8"></script>
+  <script src="scripts/module.js" type="text/javascript" charset="utf-8"></script>
+  <script src="scripts/filters/markdown.js" type="text/javascript" charset="utf-8"></script>
+  <script src="scripts/directives/editor.js" type="text/javascript" charset="utf-8"></script>
+  <script src="scripts/directives/preview.js" type="text/javascript" charset="utf-8"></script>
+  <!-- endbuild ->
 </body>
 </html>
