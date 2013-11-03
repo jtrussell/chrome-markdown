@@ -1,3 +1,3 @@
 /*global angular */
 
-angular.module('cm', []);
+angular.module('cm', ['ui.ace']);

@@ -6,20 +6,26 @@
   
   <!-- build:css assets/app.css -->
   <script src="vendor/less/dist/less-1.4.2.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" href="stylesheets/main.less" type="text/less" />
   <!-- endbuild -->
   
 </head>
-<body ng-app="cm">
+<body ng-app="cm" ng-controller="MainCtrl">
 
-  <div class="row">
-    <editor class="col-md-3" ng-bind-html-unsafe="'# Hello World' | markdown"></editor>
-    <previewclass="col-md-9"></preview>
+  <div id="editor-wrapper">
+    <editor ng-model="markdown_content"></editor>
+  </div>  
+  <div id="preview-wrapper">
+    <preview ng-bind-html-unsafe="markdown_content | markdown"></preview>
   </div>
   
   <!-- build:js assets/app.js -->
   <script src="vendor/angular/angular.js" type="text/javascript" charset="utf-8"></script>
   <script src="vendor/marked/lib/marked.js" type="text/javascript" charset="utf-8"></script>
+  <script src="vendor/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="vendor/angular-ui-ace/ui-ace.js" type="text/javascript" charset="utf-8"></script>
   <script src="scripts/module.js" type="text/javascript" charset="utf-8"></script>
+  <script src="scripts/controllers/main.js" type="text/javascript" charset="utf-8"></script>
   <script src="scripts/filters/markdown.js" type="text/javascript" charset="utf-8"></script>
   <script src="scripts/directives/editor.js" type="text/javascript" charset="utf-8"></script>
   <script src="scripts/directives/preview.js" type="text/javascript" charset="utf-8"></script>
