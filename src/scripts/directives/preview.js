@@ -13,7 +13,7 @@ angular.module('cm').directive('preview', [function() {
               'ng-bind-html-unsafe="md | markdown">',
         '</div>',
         '<div class="block-footer">',
-          '<span class="block-num">{{index + 1}}</span>',
+          '<span class="block-num">{{$index + 1}}</span>',
         '</div>',
       '</div>'
     ].join(''),
