@@ -5,8 +5,9 @@
   <title>Chrome Markdown</title>
   
   <!-- build:css assets/app.css -->
-  <script src="vendor/less/dist/less-1.4.2.js" type="text/javascript" charset="utf-8"></script>
   <link rel="stylesheet" href="stylesheets/main.less" type="text/less" />
+  <link rel="stylesheet" href="stylesheets/preview/basic.less" type="text/less" />
+  <script src="vendor/less/dist/less-1.4.2.js" type="text/javascript" charset="utf-8"></script>
   <!-- endbuild -->
   
 </head>
@@ -16,7 +17,7 @@
     <editor ng-model="markdown_content"></editor>
   </div>  
   <div id="preview-wrapper">
-    <preview ng-bind-html-unsafe="markdown_content | markdown"></preview>
+    <preview markup="markdown_content"></preview>
   </div>
   
   <!-- build:js assets/app.js -->

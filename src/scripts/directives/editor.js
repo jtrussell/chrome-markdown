@@ -5,7 +5,7 @@
 angular.module('cm').directive('editor', [function() {
   return {
     restrict: 'AE',
-    template: '<div ui-ace></div>',
+    template: '<div ui-ace="{mode: \'markdown\'}"></div>',
     replace: true,
     link: function(scope, element, attrs) {
       // ...
