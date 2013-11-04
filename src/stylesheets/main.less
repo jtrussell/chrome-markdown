@@ -1,10 +1,17 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  border-top: 3px solid #777;
+}
+
 .ace_editor {
   height: 100%;
 }
 
 #editor-wrapper {
   position: fixed;
-  top: 0;
+  top: 3px;
+  bottom: 0px;
   left: 0;
   width: 33%;
   height: 100%;
@@ -12,8 +19,22 @@
 
 #preview-wrapper {
   position: fixed;
-  top: 0;
+  top: 3px;
+  bottom: 0px;
   right: 0;
   width: 67%;
-  height: 100%;
+}
+
+header {
+  background-color: #eee;
+  font-family: arial, sans-serif;
+  
+  h1 {
+    margin: 0;
+    line-height: 45px;
+    text-align: center;
+    color: #ddd;
+    text-shadow: 1px 1px #fff, -1px -1px #666;
+    font-style: italic;
+  }
 }

@@ -14,9 +14,15 @@
 <body ng-app="cm" ng-controller="MainCtrl">
 
   <div id="editor-wrapper">
+    <header>
+      <h1>
+        Where it's made
+      </h1>
+    </header>
     <editor ng-model="markdown_content"></editor>
   </div>  
   <div id="preview-wrapper">
+    <header><h1>Where it happens</h1></header>
     <preview markup="markdown_content"></preview>
   </div>
   
