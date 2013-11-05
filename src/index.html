@@ -15,10 +15,23 @@
 <body ng-app="cm" ng-controller="MainCtrl">
 
   <snap-drawer>
-    Settings and stuff
+    <h1>Settings</h1>
+    <ul>
+      <li>Open files</li>
+      <li>Save files</li>
+      <li>Change editor themes</li>
+      <li>Change markdown styles</li>
+      <li>Toggle presentation mode</li>
+    </ul>
   </snap-drawer>
   
-  <snap-content>
+  <snap-content snap-options="{disable: 'right', touchToDrag: false}">
+    <a class="toggle" snap-toggle>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    
     <div id="editor-wrapper">
       <header><h1>Where it's made</h1></header>
       <editor ng-model="markdown_content"></editor>
