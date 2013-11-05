@@ -40,6 +40,14 @@ a.toggle {
   height: 100%;
 }
 
+.scrollable{
+  overflow: auto;
+  transition-property: top, bottom;
+  transition-duration: .2s, .2s;
+  transition-timing-function: linear, linear;
+  -webkit-overflow-scrolling: touch;
+}
+
 #editor-wrapper {
   position: absolute;
   top: 58px; bottom: 0; left: 0;
@@ -50,6 +58,7 @@ a.toggle {
   position: absolute;
   top: 58px; bottom: 0; right: 0;
   width: 67%;
+  .scrollable();
 }
 
 header {
@@ -58,7 +67,7 @@ header {
   border-bottom: 10px solid #fff;
   position: absolute;
   width: 100%;
-  top: -52px;
+  top: 6px;
   z-index: 150;
   
   h1 {
@@ -68,5 +77,14 @@ header {
     color: #ddd;
     text-shadow: 1px 1px #fff, -1px -1px #666;
     font-style: italic;
+    float: left;
+    
+    &.editor {
+      width: 33%;
+    }
+    
+    &.preview {
+      width: 67%;
+    }
   }
 }
