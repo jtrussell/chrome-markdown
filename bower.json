@@ -22,6 +22,7 @@
     "angular-ui-ace": "~0.0.4",
     "marked": "~0.2.9",
     "angular-mocks": "~1.0.8",
-    "less": "~1.4.2"
+    "less": "~1.4.2",
+    "angular-snap": "~1.0.0"
   }
 }

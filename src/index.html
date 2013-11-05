@@ -5,6 +5,7 @@
   <title>Chrome Markdown</title>
   
   <!-- build:css assets/app.css -->
+  <link rel="stylesheet" href="vendor/angular-snap/angular-snap.css" type="text/css" />
   <link rel="stylesheet" href="stylesheets/main.less" type="text/less" />
   <link rel="stylesheet" href="stylesheets/preview/basic.less" type="text/less" />
   <script src="vendor/less/dist/less-1.4.2.js" type="text/javascript" charset="utf-8"></script>
@@ -13,24 +14,29 @@
 </head>
 <body ng-app="cm" ng-controller="MainCtrl">
 
-  <div id="editor-wrapper">
-    <header>
-      <h1>
-        Where it's made
-      </h1>
-    </header>
-    <editor ng-model="markdown_content"></editor>
-  </div>  
-  <div id="preview-wrapper">
-    <header><h1>Where it happens</h1></header>
-    <preview markup="markdown_content"></preview>
-  </div>
+  <snap-drawer>
+    Settings and stuff
+  </snap-drawer>
+  
+  <snap-content>
+    <div id="editor-wrapper">
+      <header><h1>Where it's made</h1></header>
+      <editor ng-model="markdown_content"></editor>
+    </div>  
+    <div id="preview-wrapper">
+      <header><h1>Where it happens</h1></header>
+      <preview markup="markdown_content"></preview>
+    </div>
+  </snap-content>
   
   <!-- build:js assets/app.js -->
   <script src="vendor/angular/angular.js" type="text/javascript" charset="utf-8"></script>
   <script src="vendor/marked/lib/marked.js" type="text/javascript" charset="utf-8"></script>
+  <script src="vendor/snapjs/snap.js" type="text/javascript" charset="utf-8"></script>
+  <script src="vendor/angular-snap/angular-snap.js" type="text/javascript" charset="utf-8"></script>
   <script src="vendor/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
   <script src="vendor/angular-ui-ace/ui-ace.js" type="text/javascript" charset="utf-8"></script>
+  
   <script src="scripts/module.js" type="text/javascript" charset="utf-8"></script>
   <script src="scripts/controllers/main.js" type="text/javascript" charset="utf-8"></script>
   <script src="scripts/filters/markdown.js" type="text/javascript" charset="utf-8"></script>
